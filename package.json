@@ -1,4 +1,5 @@
 {
+    "name": "pengaduan",
     "private": true,
     "type": "module",
     "scripts": {
