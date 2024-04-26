@@ -22,6 +22,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     {{-- JS --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -30,9 +31,10 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" style="background-color: #126E6A;"
+        id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="#page-top">E-Pengaduan</a>
+            <a class="navbar-brand fw-bold text-white" href="#page-top">E-Pengaduan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -40,14 +42,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Download</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3 text-white" href="#tata cara">Tata Cara
+                            Pengaduan</a></li>
                 </ul>
                 <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
-                    data-bs-target="#feedbackModal">
+                    data-bs-target="#LoginModal">
                     <span class="d-flex align-items-center">
-                        <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Send Feedback</span>
+                        <span class="large">Login</span>
                     </span>
                 </button>
             </div>
@@ -55,58 +56,213 @@
     </nav>
     <!-- Mashead header-->
     <header class="masthead">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-12">
-                    <!-- Mashead text and app badges-->
-                    <div class="card" style="margin-top: 80px;">
-                        <div class="card-header" style="background-color: yellow;">
-                            Sampaikan Pengaduan Anda
-                        </div>
-                        <div class="card-body p-5">
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Default checkbox
-                                </label>
+        <div class="container px-5 border-dark">
+            <div class="card p-5 shadow p-3">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-12 pt-4">
+                        <!-- Mashead text and app badges-->
+                        <div class="card shadow p-3 mt-5 p-4" style="height: 50%; background-color: #54CAC6;">
+                            <div class="row">
+                                <h5 class="text-white">Pilih Klasifikasi Pengaduan</h5>
+                                <div class="col-md-4 border dark">
+                                    <div class="form-group">
+                                        <div class="mt-2 mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_pendidikan" value="layanan_pendidikan" checked>
+                                            <label class="form-group-label text-white" for="layanan_pendidikan">
+                                                Layanan Pendidikan
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_pesantren_asrama" value="layanan_pesantren_asrama">
+                                            <label class="form-group-label text-white" for="layanan_pesantren_asrama">
+                                                Layanan Kepesantrenan dan Asrama
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_sarana_prasarana" value="layanan_sarana_prasarana">
+                                            <label class="form-group-label text-white" for="layanan_sarana_prasarana">
+                                                Layanan Sarana dan Prasarana
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 border dark">
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_keuangan" value="layanan_keuangan">
+                                            <label class="form-group-label text-white" for="layanan_keuangan">
+                                                Layanan Keuangan
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_marketing_informasi" value="layanan_marketing_informasi">
+                                            <label class="form-group-label text-white"
+                                                for="layanan_marketing_informasi">
+                                                Layanan Marketing dan Informasi
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_bisnis" value="layanan_bisnis">
+                                            <label class="form-group-label text-white" for="layanan_bisnis">
+                                                Layanan Bisnis
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 border dark">
+                                    <div class="form-group">
+                                        <div class="mb-2">
+                                            <input class="form-group-input" type="radio" name="layanan"
+                                                id="layanan_perundungan" value="layanan_perundungan">
+                                            <label class="form-group-label text-white" for="layanan_perundungan">
+                                                Layanan Perundungan
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                    checked>
-                                <label class="form-check-label" for="flexCheckChecked">
-                                    Checked checkbox
-                                </label>
+                        </div>
+                        <div class="mt-5 text-center" id="pengaduan">
+                            <h5>Silahkan Sampaikan Pengaduan Anda</h5>
+                        </div>
+                        <div class="p-5">
+                            <div class="form-group">
+                                <div class="mb-3 mt-2">
+                                    <label for="exampleFormControlInput1" class="form-label">Nama<span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="nama">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">No HP<span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="no_hp">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+                                    <input type="text" class="form-control" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Judul Pengaduan<span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="judul">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Tingkat
+                                        Pendidikan<span style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="tingkat_pendidikan">
+                                </div>
+                            </div>
+                            <div class="form-group" id="kategori_select">
+                                <div class="mb-3">
+                                    <label for="kategori" class="form-label">Kategori
+                                        Pelayanan Sarana dan Prasarana<span style="color: red;">*</span></label>
+                                    <select class="form-select" name="kategori_pelayanan" id="kategori">
+                                        <option selected>Pilih kategori pelayanan Sarana dan Prasarana</option>
+                                        <option value="1">Fasilitas</option>
+                                        <option value="2">IT</option>
+                                        <option value="3">Keamanan</option>
+                                        <option value="4">Kebersihan</option>
+                                        <option value="5">Menu Makan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group" id="kategori_marketing">
+                                <div class="mb-3">
+                                    <label for="kategori" class="form-label">Kategori
+                                        Pelayanan Marketing dan Informasi<span style="color: red;">*</span></label>
+                                    <select class="form-select" name="kategori_pelayanan_marketing" id="kategori">
+                                        <option selected>Pilih kategori pelayanan Marketing dan Informasi</option>
+                                        <option value="1">Pelayanan Informasi</option>
+                                        <option value="2">Media Promosi</option>
+                                        <option value="3">Lainnya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group" id="kategori_bisnis">
+                                <div class="mb-3">
+                                    <label for="kategori" class="form-label">Kategori
+                                        Pelayanan Bisnis<span style="color: red;">*</span></label>
+                                    <select class="form-select" name="kategori_pelayanan_bisnis" id="kategori">
+                                        <option selected>Pilih kategori pelayanan Bisnis</option>
+                                        <option value="1">Laundry</option>
+                                        <option value="2">Antar Jemput</option>
+                                        <option value="3">AHA Mart</option>
+                                        <option value="4">Kutubuku</option>
+                                        <option value="5">Barbershop</option>
+                                        <option value="6">AHA Food Garden</option>
+                                        <option value="7">AHA Music Course</option>
+                                        <option value="8">Catering</option>
+                                        <option value="9">Yuk! Travel</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Uraian Pengaduan<span
+                                            style="color: red;">*</span></label>
+                                    <textarea class="form-control" name="uraian_pengaduan"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Lampiran<span
+                                            style="color: red;">*</span></label>
+                                    <input type="file" class="form-control" name="foto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Tanggal Kejadian<span
+                                            style="color: red;">*</span></label>
+                                    <input type="date" class="form-control" name="tgl_kejadian">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Lokasi Kejadian<span
+                                            style="color: red;">*</span></label>
+                                    <input type="text" class="form-control" name="lokasi">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-5 text-center">
-                        <p>Silahkan Sampaikan Pengaduan Anda</p>
-                    </div>
-                    <div class="p-5">
-                        <div class="mb-3 mt-3">
-                            <label for="exampleFormControlInput1" class="form-label">Judul Pengaduan</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Pengaduan</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <div class="text-center">
+                            <button class="btn btn-primary">Kirim Pengaduan</button>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <button class="btn btn-primary">Kirim Pengaduan</button>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <!-- Masthead device mockup feature-->
-                    <div class="masthead-device-mockup">
-                        <div class="device-wrapper">
-                            <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                <div class="screen bg-black">
-                                    <!-- PUT CONTENTS HERE:-->
-                                    <!-- * * This can be a video, image, or just about anything else.-->
-                                    <!-- * * Set the max width of your media to 100% and the height to-->
-                                    <!-- * * 100% like the demo example below.-->
+                    <div class="col-lg-6">
+                        <!-- Masthead device mockup feature-->
+                        <div class="masthead-device-mockup">
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait"
+                                    data-color="black">
+                                    <div class="screen bg-black">
+                                        <!-- PUT CONTENTS HERE:-->
+                                        <!-- * * This can be a video, image, or just about anything else.-->
+                                        <!-- * * Set the max width of your media to 100% and the height to-->
+                                        <!-- * * 100% like the demo example below.-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -127,82 +283,13 @@
         </div>
     </aside>
     <!-- App features section-->
-    <section id="features">
+    <section id="tata cara">
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                    <div class="container-fluid px-5">
-                        <div class="row gx-5">
-                            <div class="col-md-6 mb-5">
-                                <!-- Feature item-->
-                                <div class="text-center">
-                                    <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Device Mockups</h3>
-                                    <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop
-                                        required!</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <!-- Feature item-->
-                                <div class="text-center">
-                                    <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Flexible Use</h3>
-                                    <p class="text-muted mb-0">Put an image, video, animation, or anything else in the
-                                        screen!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-5 mb-md-0">
-                                <!-- Feature item-->
-                                <div class="text-center">
-                                    <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Free to Use</h3>
-                                    <p class="text-muted mb-0">As always, this theme is free to download and use for
-                                        any purpose!</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <!-- Feature item-->
-                                <div class="text-center">
-                                    <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Open Source</h3>
-                                    <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it
-                                        commercially!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{-- tata cara pengaduan --}}
                 </div>
-                <div class="col-lg-4 order-lg-0">
-                    <!-- Features section device mockup-->
-                    <div class="features-device-mockup">
-                        <div class="device-wrapper">
-                            <div class="device" data-device="iPhoneX" data-orientation="portrait"
-                                data-color="black">
-                                <div class="screen bg-black">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Basic features section-->
-    <section class="bg-light">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                <div class="col-12 col-lg-5">
-                    <h2 class="display-4 lh-1 mb-4">Enter a new age of web design</h2>
-                    <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some
-                        information about your application, why it was built, the problem it solves, or anything else!
-                        There's plenty of space for text here, so don't worry about writing too much.</p>
-                </div>
-                <div class="col-sm-8 col-md-6">
-                    <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle"
-                            src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -220,105 +307,39 @@
             </div>
         </div>
     </section>
-    <!-- App badge section-->
-    <section class="bg-gradient-primary-to-secondary" id="download">
-        <div class="container px-5">
-            <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge"
-                        src="assets/img/google-play-badge.svg" alt="..." /></a>
-                <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
-            </div>
-        </div>
-    </section>
     <!-- Footer-->
     <footer class="bg-black text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
-                <div class="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
-                <a href="#!">Privacy</a>
-                <span class="mx-1">&middot;</span>
-                <a href="#!">Terms</a>
-                <span class="mx-1">&middot;</span>
-                <a href="#!">FAQ</a>
+                <div class="mb-2">&copy;Yayasan Islam Alhamidiyah</div>
             </div>
         </div>
     </footer>
-    <!-- Feedback Modal-->
-    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Login Modal-->
+    <div class="modal" tabindex="-1" id="LoginModal">
+        <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                    <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
-                    <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body border-0 p-4">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text"
-                                placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                <div class="modal-body">
+                    <form action="{{ url('login') }}">
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" id="email">
                         </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                            </div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd">
                         </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                required.</div>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> Remember me</label>
                         </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
-                                style="height: 10rem" data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg disabled"
-                                id="submitButton" type="submit">Submit</button></div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-info">Login</button>
                 </div>
             </div>
         </div>
@@ -326,3 +347,29 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function() {
+        $("#kategori_select").hide();
+        $("#kategori_marketing").hide();
+        $("#kategori_bisnis").hide();
+        $("input[name=layanan]").change(function() {
+            if ($("#layanan_sarana_prasarana").is(':checked')) {
+                $("#kategori_select").show();
+                $("#kategori_marketing").hide();
+                $("#kategori_bisnis").hide();
+            } else if ($("#layanan_marketing_informasi").is(':checked')) {
+                $("#kategori_select").hide();
+                $("#kategori_marketing").show();
+                $("#kategori_bisnis").hide();
+            } else if ($("#layanan_bisnis").is(':checked')) {
+                $("#kategori_select").hide();
+                $("#kategori_bisnis").show();
+                $("#kategori_marketing").hide();
+            } else {
+                $("#kategori_select").hide();
+                $("#kategori_marketing").hide();
+                $("#kategori_bisnis").hide();
+            }
+        });
+    });
+</script>
